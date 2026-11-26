@@ -1,0 +1,20 @@
+# Keep text consistent across Windows and Linux, including shell scripts.
+# Apply incrementally; do not renormalize the existing repository in this task.
+* text=auto eol=lf
+
+# Native Windows command scripts need CRLF when introduced.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Preserve binary assets and the existing compiled test fixture byte-for-byte.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.woff binary
+*.woff2 binary
+*.o binary
